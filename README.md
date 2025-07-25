@@ -38,7 +38,7 @@ A full-featured Streamlit app that integrates a **locally-run Mistral LLM**, **L
 ├── models/                      # Local GGUF model directory (download manually)
 ├── .streamlit/config.toml       # Streamlit configuration
 ├── requirements.txt             # Python dependencies
-├── README.md                    # Project README
+├── README.md                    # README
 └── .github/workflows/deploy.yml # GitHub Actions workflow for CI
 ```
 
@@ -49,8 +49,8 @@ A full-featured Streamlit app that integrates a **locally-run Mistral LLM**, **L
 1. **Create virtual environment**
 
 ```bash
-conda create -n mistralrag python=3.10 -y
-conda activate mistralrag
+conda create -n venv python=3.10 -y
+conda activate venv
 ```
 
 2. **Install dependencies**
@@ -69,7 +69,7 @@ curl -L https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/ma
 4. **Run Streamlit app**
 
 ```bash
-streamlit run app_mistral.py
+streamlit run app.py
 ```
 
 ---
@@ -79,7 +79,7 @@ streamlit run app_mistral.py
 1. Push this repo to GitHub
 2. Log into [Streamlit Community Cloud](https://streamlit.io/cloud)
 3. Click **New App**
-4. Connect GitHub repo and select `app_mistral.py`
+4. Connect GitHub repo and select `app.py`
 5. Click **Deploy**
 
 Ensure the **GGUF model is not pushed to GitHub** due to file size. You'll need to manually upload it via [Streamlit Secrets Manager](https://docs.streamlit.io/streamlit-community-cloud/get-started/deploy-an-app#manage-secrets-and-files).

@@ -8,9 +8,8 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import tempfile
-import os
 
-st.set_page_config(page_title="Multi-Format Content Converter + PDF QA", layout="wide")
+st.set_page_config(page_title="Multi-Format Content Converter and PDF QA", layout="wide")
 
 st.title("Multi-Format Content Converter and PDF Question Answering")
 
@@ -30,7 +29,7 @@ def load_llm():
 
 llm = load_llm()
 
-# Define content transformation prompt templates
+# Define prompt templates
 TEMPLATES = {
     "blog_to_tweet": """Rewrite the following blog post into a concise 3-tweet thread:
 
@@ -47,7 +46,7 @@ TEMPLATES = {
 }
 
 
-# Sidebar: Task selector
+# Task selector sidebar
 task = st.sidebar.selectbox("Choose content transformation task", list(TEMPLATES.keys()))
 
 st.subheader("Content Transformer")
