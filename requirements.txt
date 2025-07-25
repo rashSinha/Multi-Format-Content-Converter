@@ -1,0 +1,21 @@
+# Core Dependencies
+streamlit
+langchain>=0.2.0
+llama-cpp-python>=0.2.72
+
+# Embeddings & Vector Store
+sentence-transformers
+faiss-cpu
+
+# PDF & File Handling
+pdfminer.six
+PyMuPDF
+
+# OCR for Vision QA
+pytesseract
+tesseract
+Pillow
+
+# Optional Enhancements
+tqdm
+typing-extensions
